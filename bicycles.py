@@ -47,7 +47,7 @@ class Bike_shop(object):
     """
     self.inventory.remove(bike)
     customer.buy_bike(bike)
-    self._profit += bike.get_price() - bike.get_cost()
+    self.profit += bike.get_price() - bike.get_cost()
 
     
 class Costumer(object):
@@ -71,7 +71,7 @@ class Costumer(object):
   def buy_bike(self, bicycle):
     """ Add new bicycle to our stock after paying for it"""
     self.funds = self.funds - bicycle.sell_price
-    bikes.append(bicycle)
+    self.bikes.append(bicycle)
     
   
     
